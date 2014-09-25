@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4EA13CBF-6F12-4D22-A7BF-2160F1F1C962}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YPScraper</RootNamespace>
+    <AssemblyName>YPScraper</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>yp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\..\HTMLScraper\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\..\HTMLScraper\Bin\Net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActiveFilter.Designer.cs">
+      <DependentUpon>ActiveFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApiResults.cs" />
+    <Compile Include="BusinessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusinessDialog.Designer.cs">
+      <DependentUpon>BusinessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDelegation.cs" />
+    <Compile Include="CSVBuilder.cs" />
+    <Compile Include="DataScrapePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DataScrapePanel.Designer.cs">
+      <DependentUpon>DataScrapePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs" />
+    <Compile Include="FilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterControl.Designer.cs">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilterGroup.cs" />
+    <Compile Include="FilterPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FilterPanel.Designer.cs">
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlClient.cs" />
+    <Compile Include="MainScraper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainScraper.Designer.cs">
+      <DependentUpon>MainScraper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewScrape.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewScrape.Designer.cs">
+      <DependentUpon>NewScrape.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="NameValueAndUrl.cs" />
+    <Compile Include="ScrapeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScrapeControl.Designer.cs">
+      <DependentUpon>ScrapeControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UriFactory.cs" />
+    <Compile Include="YellowPagesBusinessListing.cs" />
+    <Compile Include="YellowPagesBusinessParser.cs" />
+    <Compile Include="YellowPagesDataResults.cs" />
+    <Compile Include="YellowPagesDataScraper.cs" />
+    <Compile Include="YellowPagesFilter.cs" />
+    <Compile Include="YellowPagesParser.cs" />
+    <Compile Include="YellowPagesInfoResults.cs" />
+    <Compile Include="YellowPagesSearchPage.cs" />
+    <Compile Include="YPApiLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YPApiLookup.Designer.cs">
+      <DependentUpon>YPApiLookup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ActiveFilter.resx">
+      <DependentUpon>ActiveFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessDialog.resx">
+      <DependentUpon>BusinessDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataScrapePanel.resx">
+      <DependentUpon>DataScrapePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterControl.resx">
+      <DependentUpon>FilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilterPanel.resx">
+      <DependentUpon>FilterPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainScraper.resx">
+      <DependentUpon>MainScraper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewScrape.resx">
+      <DependentUpon>NewScrape.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScrapeControl.resx">
+      <DependentUpon>ScrapeControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YPApiLookup.resx">
+      <DependentUpon>YPApiLookup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="yp.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
